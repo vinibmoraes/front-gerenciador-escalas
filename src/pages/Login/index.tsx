@@ -1,4 +1,4 @@
-import LoginContainer from "../../components/CusttomPageLogin/LoginContainer";
+import LoginContainer from "../../components/CustomPageLogin/LoginContainer";
 import { Box } from "@mui/material";
 
 const Login = () => {
@@ -10,7 +10,7 @@ const Login = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: "#ffffff",
+        backgroundColor: "#06224C",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

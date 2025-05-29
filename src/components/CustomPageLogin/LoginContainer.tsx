@@ -23,7 +23,8 @@ const LoginContainer = () => (
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#00276d",
+        backgroundColor: "#0F52BA",
+
         height: "100%",
         overflow: "hidden",
       }}
@@ -38,7 +39,7 @@ const LoginContainer = () => (
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        backgroundColor: "#00276d",
+        backgroundColor: "grey.500",
         color: "#fff",
         height: "100%",
         overflow: "hidden",

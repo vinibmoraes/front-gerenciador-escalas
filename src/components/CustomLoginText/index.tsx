@@ -10,7 +10,7 @@ interface LoginTextProps extends TypographyProps {
 const sizeStyles = {
   large: { fontSize: "5vh", fontWeight: 700 },
   medium: { fontSize: "2.5vh", fontWeight: 500 },
-  small: { fontSize: "1vh", fontWeight: 400 },
+  small: { fontSize: "1.8vh", fontWeight: 400 },
 };
 
 const LoginText = ({ text, size = "medium", ...props }: LoginTextProps) => {
