@@ -5,6 +5,7 @@ import SocialLoginButton from "../CustomButtonPageLogin";
 import LoginText from "../CustomLoginText";
 import BlueButton from "../CustomButtonBlue";
 import EntrarButton from "../CustomButtonEntrar";
+import { loginWithGoogle, loginWithApple } from "../../services/auth";
 
 const LoginRight = () => {
   return (
@@ -28,8 +29,13 @@ const LoginRight = () => {
         <SocialLoginButton
           icon={<GoogleIcon />}
           text="Registrar-se com Google"
+          onClick={loginWithGoogle}
         />
-        <SocialLoginButton icon={<AppleIcon />} text="Registrar-se com Apple" />
+        <SocialLoginButton
+          icon={<AppleIcon />}
+          text="Registrar-se com Apple"
+          onClick={loginWithApple}
+        />
 
         {/* Divisor "OU" */}
         <Box
