@@ -4,6 +4,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 import SocialLoginButton from "../CustomButtonPageLogin";
 import LoginText from "../CustomLoginText";
 import BlueButton from "../CustomButtonBlue";
+import EntrarButton from "../CustomButtonEntrar";
 
 const LoginRight = () => {
   return (
@@ -53,17 +54,17 @@ const LoginRight = () => {
             mt: "1vh",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center", // Centraliza o conteúdo principal (incluindo o botão)
-            width: "100%", // Garante que o container ocupe toda a largura
+            alignItems: "center",
+            width: "100%",
             gap: 1,
           }}
         >
           {/* Container do texto alinhado à esquerda */}
           <Box
             sx={{
-              width: "100%", // Ocupa toda a largura
+              width: "100%",
               display: "flex",
-              justifyContent: "flex-start", // Alinha o texto à esquerda
+              justifyContent: "flex-start",
             }}
           >
             <LoginText
@@ -74,7 +75,7 @@ const LoginRight = () => {
           </Box>
 
           {/* Botão centralizado */}
-          <BlueButton text="Entrar" />
+          <EntrarButton text="Entrar" />
         </Box>
       </Box>
     </Stack>
