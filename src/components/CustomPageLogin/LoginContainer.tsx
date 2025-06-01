@@ -5,10 +5,10 @@ import LoginRight from "./LoginRight";
 const LoginContainer = () => (
   <Paper
     sx={{
-      width: "70%",
-      maxWidth: "70%",
-      height: "70%",
-      maxHeight: "70%",
+      width: "80%",
+      maxWidth: "80%",
+      height: "80%",
+      maxHeight: "80%",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",

@@ -31,7 +31,7 @@ const StyledButton = styled(Button)({
 
   // Tamanho e espaçamento
   padding: "12px",
-  height: "5vh",
+  height: "4.5vh",
   width: "35vh",
 
   // Efeitos visuais

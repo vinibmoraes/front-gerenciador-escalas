@@ -29,7 +29,7 @@ const StyledButton = styled(Button)({
   border: "none",
 
   padding: "12px",
-  height: "5vh",
+  height: "4.5vh",
   width: "35vh",
 
   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",

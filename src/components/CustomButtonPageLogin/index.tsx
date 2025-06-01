@@ -47,7 +47,7 @@ const StyledButton = styled(Button)({
   textTransform: "none",
   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   transition: "all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)",
-  height: "5vh",
+  height: "4.5vh",
   width: "35vh",
   position: "relative",
   overflow: "hidden",

@@ -1,16 +1,16 @@
-import { Stack, Typography, Button, Box } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import AppleIcon from "@mui/icons-material/Apple";
 import GoogleIcon from "@mui/icons-material/Google";
 import SocialLoginButton from "../CustomButtonPageLogin";
 import LoginText from "../CustomLoginText";
 import BlueButton from "../CustomButtonBlue";
-import EntrarButton from "../CustomButtonEntrar";
+import CreateAccountButton from "../CustomButtonCreateAccount";
+import CustomInputLogin from "../CustomInputLogin";
+import RememberAndRecover from "../CustomRememberAndRecover";
 
 const LoginRight = () => {
   return (
     <Stack spacing={3} alignItems="center">
-      <LoginText text="Gerencie suas escalas" size="large" fontWeight="bold" />
-
       <Box
         sx={{
           gap: "20px",
@@ -22,14 +22,27 @@ const LoginRight = () => {
         <Box
           sx={{ display: "flex", justifyContent: "flex-start", width: "100%" }}
         >
-          <LoginText text="Inscreva-se agora" size="medium" fontWeight="bold" />
+          <LoginText
+            text="Gerenciador de escalas"
+            size="large"
+            fontWeight="bold"
+          />
+        </Box>
+        <Box
+          sx={{ display: "flex", justifyContent: "flex-start", width: "100%" }}
+        >
+          <LoginText
+            text="Acesse agora mesmo"
+            size="medium"
+            fontWeight="bold"
+          />
         </Box>
 
-        <SocialLoginButton
-          icon={<GoogleIcon />}
-          text="Registrar-se com Google"
-        />
-        <SocialLoginButton icon={<AppleIcon />} text="Registrar-se com Apple" />
+        <CustomInputLogin label="E-mail" type="email" />
+        <CustomInputLogin label="Senha" type="password" />
+        <RememberAndRecover />
+
+        <BlueButton text="Entrar" />
 
         {/* Divisor "OU" */}
         <Box
@@ -45,8 +58,11 @@ const LoginRight = () => {
           <Box sx={{ flex: 1, height: "1px", backgroundColor: "#e0e0e0" }} />
         </Box>
 
+        <SocialLoginButton icon={<GoogleIcon />} text="Entrar com Google" />
+        <SocialLoginButton icon={<AppleIcon />} text="Entrar com Apple" />
+
         {/* Botão Criar Conta */}
-        <BlueButton text="Criar conta" />
+        <CreateAccountButton text="Criar conta Nações" />
 
         {/* Seção de login */}
         <Box
@@ -66,16 +82,7 @@ const LoginRight = () => {
               display: "flex",
               justifyContent: "flex-start",
             }}
-          >
-            <LoginText
-              text="Já tem uma conta?"
-              size="small"
-              fontWeight="bold"
-            />
-          </Box>
-
-          {/* Botão centralizado */}
-          <EntrarButton text="Entrar" />
+          ></Box>
         </Box>
       </Box>
     </Stack>
