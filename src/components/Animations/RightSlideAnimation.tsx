@@ -1,4 +1,3 @@
-// components/RightSlideAnimation.tsx
 import { Box, BoxProps } from "@mui/material";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
@@ -26,9 +25,9 @@ const RightSlideAnimation = ({
       }}
     >
       <motion.div
-        initial={{ x: "100vw", opacity: 0 }} // Começa totalmente à direita
-        animate={{ x: 0, opacity: 1 }} // Vem para a posição normal (centro)
-        exit={{ x: "100vw", opacity: 0 }} // Sai para a direita
+        initial={{ x: "100vw", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: "100vw", opacity: 0 }}
         transition={{
           type: "spring",
           damping: 25,

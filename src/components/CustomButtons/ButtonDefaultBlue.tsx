@@ -25,7 +25,7 @@ const StyledButton = styled(Button)({
 
   backgroundColor: "#0F52BA",
   color: "#fff",
-  borderRadius: "24px",
+  borderRadius: "6px",
   border: "none",
 
   padding: "12px",

@@ -1,26 +1,17 @@
-import {
-  Box,
-  FormControlLabel,
-  Checkbox,
-  Typography,
-  Link,
-} from "@mui/material";
+import { FormControlLabel, Checkbox, Typography, Link } from "@mui/material";
 import { useState } from "react";
 import RecoverPasswordModal from "../CustomRecoverPasswordModal";
+import HStack from "../CustomDirectionStack/HStack";
 
 const RememberAndRecover = () => {
   const [checked, setChecked] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        width: "100%",
-        alignItems: "center",
-        mt: "1px",
-      }}
+    <HStack
+      justifyContent="center"
+      alignItems="center"
+      sx={{ width: "80%", maxWidth: "80%", mb: "1vh", mt: "-2vh" }}
     >
       <FormControlLabel
         control={
@@ -28,14 +19,15 @@ const RememberAndRecover = () => {
             size="small"
             checked={checked}
             onChange={(e) => setChecked(e.target.checked)}
-            sx={{ color: "#fff" }}
+            sx={{ color: "#383838" }}
           />
         }
         label={
           <Typography
             sx={{
-              fontSize: "14px",
-              color: "#fff",
+              fontSize: "12px",
+              color: "#383838",
+
               fontFamily: '"Poppins", sans-serif',
             }}
           >
@@ -46,15 +38,15 @@ const RememberAndRecover = () => {
       <Link
         onClick={() => setOpenModal(true)}
         sx={{
-          fontSize: "14px",
-          color: "#fff",
+          fontSize: "12px",
+          color: "#383838",
           cursor: "pointer",
           textDecoration: "none",
           fontFamily: '"Poppins", sans-serif',
           position: "relative",
           padding: "0 2px",
           "&:hover": {
-            color: "#fff",
+            color: "#383838",
             "&::after": {
               content: '""',
               position: "absolute",
@@ -62,7 +54,7 @@ const RememberAndRecover = () => {
               left: 0,
               width: "100%",
               height: "2px",
-              backgroundColor: "#fff",
+              backgroundColor: "#383838",
               transform: "scaleX(1)",
               transition: "transform 0.3s ease",
             },
@@ -87,7 +79,7 @@ const RememberAndRecover = () => {
         open={openModal}
         onClose={() => setOpenModal(false)}
       />
-    </Box>
+    </HStack>
   );
 };
 

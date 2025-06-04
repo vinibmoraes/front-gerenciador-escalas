@@ -20,7 +20,7 @@ const RecoverPasswordModal = ({ open, onClose }: Props) => {
       <RightSlideAnimation width={300}>
         <Box
           sx={{
-            backgroundColor: "#fff",
+            backgroundColor: "#383838",
             borderRadius: "8px",
             p: 3,
             boxShadow: 24,
