@@ -4,7 +4,13 @@ import WhiteButton from "../CustomButtons/ButtonDefaultWhite";
 import VStack from "../CustomDirectionStack/VStack";
 import logoNacoes from "../../assets/logo-nacoes-branco.png";
 
-const SignUpSection = () => {
+interface StackLoginSecondaryRightProps {
+  onBackToLogin: () => void;
+}
+
+const LoginSecondaryLeft = ({
+  onBackToLogin,
+}: StackLoginSecondaryRightProps) => {
   return (
     <Box
       sx={{
@@ -45,7 +51,7 @@ const SignUpSection = () => {
         />
 
         <Text
-          text="Ainda não possui conta?"
+          text="Já possui uma conta?"
           size="medium"
           color="#FFFFFF"
           sx={{
@@ -54,10 +60,10 @@ const SignUpSection = () => {
           }}
         />
 
-        <WhiteButton text="Criar conta" />
+        <WhiteButton text="Faça Login" onClick={onBackToLogin} />
       </VStack>
     </Box>
   );
 };
 
-export default SignUpSection;
+export default LoginSecondaryLeft;

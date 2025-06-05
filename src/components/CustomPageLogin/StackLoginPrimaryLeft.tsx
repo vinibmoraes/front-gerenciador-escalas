@@ -1,4 +1,4 @@
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box } from "@mui/material";
 import AppleIcon from "@mui/icons-material/Apple";
 import Text from "../CustomTexts/TextPageLogin";
 import BlueButton from "../CustomButtons/ButtonDefaultBlue";
@@ -10,7 +10,7 @@ import AnimatedIcon from "../Animations/AnimatedIcon";
 import VStack from "../CustomDirectionStack/VStack";
 import HStack from "../CustomDirectionStack/HStack";
 
-const LoginRight = () => {
+const LoginPrimaryLeft = () => {
   return (
     <Box
       sx={{
@@ -67,4 +67,4 @@ const LoginRight = () => {
   );
 };
 
-export default LoginRight;
+export default LoginPrimaryLeft;

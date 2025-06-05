@@ -1,6 +1,6 @@
 import { Modal, Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
-import RightSlideAnimation from "../Animations/RightSlideAnimation";
+import RightSlideAnimation from "../Animations/RightToLeftSlideAnimation";
 
 type Props = {
   open: boolean;
