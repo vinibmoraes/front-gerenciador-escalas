@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
-import Text from "../CustomTexts/TextPageLogin";
-import WhiteButton from "../CustomButtons/ButtonDefaultWhite";
-import VStack from "../CustomDirectionStack/VStack";
-import logoNacoes from "../../assets/logo-nacoes-branco.png";
+import logoNacoes from "../../../../assets/logo-nacoes-branco.png";
+import VStack from "../../../../components/stacks/Vstack";
+import WhiteButton from "../../../../components/buttons/CustomButtonWhite";
+import CustomText from "../../../../components/texts/CustomText";
 
 interface StackLoginSecondaryRightProps {
   onBackToLogin: () => void;
@@ -44,13 +44,13 @@ const LoginSecondaryLeft = ({
           alt="Logo Nações"
           sx={{
             width: "auto",
-            height: "25vh",
+            height: "40vh",
             margin: 0,
             padding: 0,
           }}
         />
 
-        <Text
+        <CustomText
           text="Já possui uma conta?"
           size="medium"
           color="#FFFFFF"

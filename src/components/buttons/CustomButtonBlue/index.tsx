@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const WhiteButton = ({
+const CustomButtonBlue = ({
   text,
   onClick,
 }: {
@@ -18,19 +18,19 @@ const WhiteButton = ({
 const StyledButton = styled(Button)({
   fontFamily: '"Poppins", sans-serif',
   fontWeight: 500,
-  fontSize: "16px",
+  fontSize: "1.75vh",
   textAlign: "center",
   whiteSpace: "nowrap",
   textTransform: "none",
 
-  backgroundColor: "#fff",
-  color: "#0F52BA",
+  backgroundColor: "#0F52BA",
+  color: "#fff",
   borderRadius: "6px",
   border: "none",
 
   padding: "12px",
-  height: "4.5vh",
-  width: "35vh",
+  height: "5vh",
+  width: "40vh",
 
   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -40,8 +40,8 @@ const StyledButton = styled(Button)({
   justifyContent: "center",
 
   "&:hover": {
-    backgroundColor: "#fff",
-    color: "#0F52BA",
+    backgroundColor: "#0F52BA",
+    color: "#fff",
     transform: "translateY(-2px)",
     boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
   },
@@ -52,4 +52,4 @@ const StyledButton = styled(Button)({
   },
 });
 
-export default WhiteButton;
+export default CustomButtonBlue;

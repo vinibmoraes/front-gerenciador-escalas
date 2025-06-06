@@ -1,13 +1,13 @@
 import { Box } from "@mui/material";
 import AppleIcon from "@mui/icons-material/Apple";
-import Text from "../CustomTexts/TextPageLogin";
-import BlueButton from "../CustomButtons/ButtonDefaultBlue";
-import AuthIconButton from "../CustomButtons/ButtonIcon";
-import CustomInputLogin from "../CustomInputs/InputLogin";
-import AnimatedIcon from "../Animations/AnimatedIcon";
-import VStack from "../CustomDirectionStack/VStack";
-import HStack from "../CustomDirectionStack/HStack";
-import logoGoogleColorido from "../../assets/logo-google-colorido.png";
+import BlueButton from "../../../../components/buttons/CustomButtonBlue";
+import AuthIconButton from "../../../../components/buttons/CustomButtonIcon";
+import AnimatedIcon from "../../../../components/animations/AnimatedIcon";
+import VStack from "../../../../components/stacks/Vstack";
+import HStack from "../../../../components/stacks/Hstack";
+import logoGoogleColorido from "../../../../assets/logo-google-colorido.png";
+import CustomText from "../../../../components/texts/CustomText";
+import CustomInputLogin from "../../../../components/inputs/CustomInputLogin";
 
 const StackLoginSecondaryRight = () => {
   return (
@@ -24,11 +24,11 @@ const StackLoginSecondaryRight = () => {
       }}
     >
       <VStack gap={2} alignItems="center" sx={{ width: "100%", maxWidth: 400 }}>
-        <Text text="Criar conta" size="medium" color="#0F52BA" />
+        <CustomText text="Criar conta" size="medium" color="#0F52BA" />
 
         <HStack
           sx={{
-            width: "80%",
+            width: "40%",
             display: "flex",
             justifyContent: "space-around",
           }}
@@ -39,11 +39,11 @@ const StackLoginSecondaryRight = () => {
           <AuthIconButton icon={<AnimatedIcon icon={<AppleIcon />} />} />
         </HStack>
 
-        <Box sx={{ width: "80%", textAlign: "left" }}>
-          <Text
+        <Box sx={{}}>
+          <CustomText
             sx={{ paddingTop: "1vh", paddingBottom: "0.5vh" }}
             text="Ou cadastre-se com seu e-mail"
-            size="small"
+            size="smallMedium"
             color="#0F52BA"
           />
         </Box>
@@ -52,7 +52,9 @@ const StackLoginSecondaryRight = () => {
         <CustomInputLogin label="E-mail" type="email" />
         <CustomInputLogin label="Senha" type="password" />
 
-        <BlueButton text="Cadastrar" />
+        <Box sx={{ mt: "3vh" }}>
+          <BlueButton text="Cadastrar" />
+        </Box>
       </VStack>
     </Box>
   );

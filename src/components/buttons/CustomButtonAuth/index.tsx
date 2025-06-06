@@ -1,9 +1,9 @@
 import React, { useState, useEffect, ReactElement } from "react";
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { AnimatedIconProps } from "../Animations/AnimatedIcon";
+import { AnimatedIconProps } from "../../animations/AnimatedIcon";
 
-const SocialLoginButton = ({
+const CustomButtonAuth = ({
   icon,
   text,
   onClick,
@@ -72,7 +72,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
   transition: "all 0.3s ease",
   height: "4.5vh",
-  width: "16vh",
+  width: "18vh",
   display: "flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -100,4 +100,4 @@ const StyledButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default SocialLoginButton;
+export default CustomButtonAuth;

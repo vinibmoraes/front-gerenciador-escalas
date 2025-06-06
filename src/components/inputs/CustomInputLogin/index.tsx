@@ -18,7 +18,7 @@ type CustomInputProps = {
   endAdornment?: React.ReactNode;
 } & TextFieldProps;
 
-const CustomInput = ({
+const CustomInputLogin = ({
   label,
   type = "text",
   endAdornment,
@@ -46,9 +46,9 @@ const CustomInput = ({
       <Typography
         variant="body2"
         sx={{
-          fontSize: "12px",
+          fontSize: "1.5vh",
           color: "#383838",
-          marginBottom: "2px",
+          marginBottom: "0.25vh",
           fontFamily: '"Poppins", sans-serif',
         }}
       >
@@ -65,10 +65,12 @@ const CustomInput = ({
             <InputAdornment position="end">{endAdornment}</InputAdornment>
           ) : undefined,
           style: {
-            fontSize: "14px",
-            height: "4.5vh",
-            padding: "8px",
-            width: "35vh",
+            height: "5vh",
+            paddingTop: "0.5vh",
+            paddingBottom: "0.5vh",
+            paddingRight: "1.5vh",
+            paddingLeft: "0.5vh",
+            width: "40vh",
           },
         }}
         {...props}
@@ -79,11 +81,16 @@ const CustomInput = ({
 
 const StyledTextField = styled(TextField)(() => ({
   backgroundColor: "#fff",
-  borderRadius: "6px",
-  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+  borderRadius: "0.8vh",
+  boxShadow: "0vh 0.3vh 0.6vh rgba(0, 0, 0, 0.1)",
   fontFamily: '"Poppins", sans-serif',
   "& .MuiOutlinedInput-root": {
-    borderRadius: "6px",
+    borderRadius: "0.8vh",
+    height: "5vh",
+    "& input": {
+      padding: "1.2vh",
+      fontSize: "1.5vh",
+    },
     "& fieldset": {
       borderColor: "#ddd",
     },
@@ -95,10 +102,10 @@ const StyledTextField = styled(TextField)(() => ({
     },
   },
   "& input:-webkit-autofill": {
-    WebkitBoxShadow: "0 0 0 0px #fff inset",
+    WebkitBoxShadow: "0 0 0 0vh #fff inset",
     WebkitTextFillColor: "#000",
     transition: "background-color 5000s ease-in-out 0s",
   },
 }));
 
-export default CustomInput;
+export default CustomInputLogin;

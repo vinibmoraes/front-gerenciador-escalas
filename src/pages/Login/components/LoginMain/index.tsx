@@ -1,14 +1,14 @@
 import { useState } from "react";
-import LoginPrimaryLeft from "./StackLoginPrimaryLeft";
-import LoginPrimaryRight from "./StackLoginPrimaryRight";
-import LoginSecondaryLeft from "./StackLoginSecondaryLeft";
-import StackLoginSecondaryRight from "./StackLoginSecondaryRight";
 import { Box } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
-import RightToLeftSlideAnimation from "../Animations/RightToLeftSlideAnimation";
-import LeftToRightSlideAnimation from "../Animations/LeftToRightSlideAnimation";
+import RightSlideAnimation from "../../../../components/animations/RightToLeftSlide";
+import LoginPrimaryLeft from "../LoginPrimaryLeft";
+import LeftSlideAnimation from "../../../../components/animations/LeftToRightSlide";
+import LoginPrimaryRight from "../LoginPrimaryRight";
+import StackLoginSecondaryRight from "../LoginSecondaryRight";
+import LoginSecondaryLeft from "../LoginSecondaryLeft";
 
-const LoginAll = () => {
+const LoginMain = () => {
   const [isCreatingAccount, setIsCreatingAccount] = useState(false);
 
   const handleCreateAccount = () => setIsCreatingAccount(true);
@@ -50,13 +50,13 @@ const LoginAll = () => {
         >
           <AnimatePresence mode="wait">
             {!isCreatingAccount ? (
-              <RightToLeftSlideAnimation key="login">
+              <RightSlideAnimation key="login">
                 <LoginPrimaryLeft />
-              </RightToLeftSlideAnimation>
+              </RightSlideAnimation>
             ) : (
-              <RightToLeftSlideAnimation key="register">
+              <RightSlideAnimation key="register">
                 <LoginSecondaryLeft onBackToLogin={handleBackToLogin} />
-              </RightToLeftSlideAnimation>
+              </RightSlideAnimation>
             )}
           </AnimatePresence>
         </Box>
@@ -74,13 +74,13 @@ const LoginAll = () => {
         >
           <AnimatePresence mode="wait">
             {!isCreatingAccount ? (
-              <LeftToRightSlideAnimation key="login-right">
+              <LeftSlideAnimation key="login-right">
                 <LoginPrimaryRight onCreateAccount={handleCreateAccount} />
-              </LeftToRightSlideAnimation>
+              </LeftSlideAnimation>
             ) : (
-              <LeftToRightSlideAnimation key="register-right">
+              <LeftSlideAnimation key="register-right">
                 <StackLoginSecondaryRight />
-              </LeftToRightSlideAnimation>
+              </LeftSlideAnimation>
             )}
           </AnimatePresence>
         </Box>
@@ -89,4 +89,4 @@ const LoginAll = () => {
   );
 };
 
-export default LoginAll;
+export default LoginMain;

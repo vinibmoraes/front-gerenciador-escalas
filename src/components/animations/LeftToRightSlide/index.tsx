@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-const LeftSlideAnimation = ({ children }: { children: ReactNode }) => {
+const LeftToRightSlide = ({ children }: { children: ReactNode }) => {
   return (
     <motion.div
       initial={{ x: "-100%", opacity: 0 }}
@@ -15,4 +15,4 @@ const LeftSlideAnimation = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default LeftSlideAnimation;
+export default LeftToRightSlide;

@@ -1,6 +1,6 @@
 import { Modal, Box, Typography, Button, TextField } from "@mui/material";
 import { useState } from "react";
-import RightSlideAnimation from "../Animations/RightToLeftSlideAnimation";
+import RightToLeftSlide from "../../../../components/animations/RightToLeftSlide";
 
 type Props = {
   open: boolean;
@@ -17,7 +17,7 @@ const RecoverPasswordModal = ({ open, onClose }: Props) => {
 
   return (
     <Modal open={open} onClose={onClose}>
-      <RightSlideAnimation width={300}>
+      <RightToLeftSlide width={300}>
         <Box
           sx={{
             backgroundColor: "#383838",
@@ -45,7 +45,7 @@ const RecoverPasswordModal = ({ open, onClose }: Props) => {
             Enviar
           </Button>
         </Box>
-      </RightSlideAnimation>
+      </RightToLeftSlide>
     </Modal>
   );
 };

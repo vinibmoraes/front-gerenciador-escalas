@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactNode } from "react";
 
-const ButtonIcon = ({
+const CustomButtonIcon = ({
   icon,
   onClick,
 }: {
@@ -36,4 +36,4 @@ const StyledButton = styled(Button)(() => ({
   },
 }));
 
-export default ButtonIcon;
+export default CustomButtonIcon;

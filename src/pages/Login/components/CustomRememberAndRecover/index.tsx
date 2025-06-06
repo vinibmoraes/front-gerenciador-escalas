@@ -1,7 +1,7 @@
 import { FormControlLabel, Checkbox, Typography, Link } from "@mui/material";
 import { useState } from "react";
 import RecoverPasswordModal from "../CustomRecoverPasswordModal";
-import HStack from "../CustomDirectionStack/HStack";
+import HStack from "../../../../components/stacks/Hstack";
 
 const RememberAndRecover = () => {
   const [checked, setChecked] = useState(false);
@@ -9,9 +9,9 @@ const RememberAndRecover = () => {
 
   return (
     <HStack
-      justifyContent="center"
+      justifyContent="space-evenly"
       alignItems="center"
-      sx={{ width: "80%", maxWidth: "80%", mb: "1vh", mt: "-2vh" }}
+      sx={{ width: "40%", maxWidth: "400px", mb: "1.5vh", mt: "-2vh" }}
     >
       <FormControlLabel
         control={
@@ -19,15 +19,14 @@ const RememberAndRecover = () => {
             size="small"
             checked={checked}
             onChange={(e) => setChecked(e.target.checked)}
-            sx={{ color: "#383838" }}
+            sx={{ color: "#383838", mt: "0.2vh" }}
           />
         }
         label={
           <Typography
             sx={{
-              fontSize: "12px",
+              fontSize: "1.5vh",
               color: "#383838",
-
               fontFamily: '"Poppins", sans-serif',
             }}
           >
@@ -38,22 +37,22 @@ const RememberAndRecover = () => {
       <Link
         onClick={() => setOpenModal(true)}
         sx={{
-          fontSize: "12px",
+          fontSize: "1.5vh",
           color: "#383838",
           cursor: "pointer",
           textDecoration: "none",
           fontFamily: '"Poppins", sans-serif',
           position: "relative",
-          padding: "0 2px",
+          padding: "0 0.4vh",
           "&:hover": {
             color: "#383838",
             "&::after": {
               content: '""',
               position: "absolute",
-              bottom: "-2px",
+              bottom: "-0.3vh",
               left: 0,
               width: "100%",
-              height: "2px",
+              height: "0.3vh",
               backgroundColor: "#383838",
               transform: "scaleX(1)",
               transition: "transform 0.3s ease",
@@ -62,10 +61,10 @@ const RememberAndRecover = () => {
           "&::after": {
             content: '""',
             position: "absolute",
-            bottom: "-2px",
+            bottom: "-0.3vh",
             left: 0,
             width: "100%",
-            height: "2px",
+            height: "0.3vh",
             backgroundColor: "#fff",
             transform: "scaleX(0)",
             transition: "transform 0.3s ease",

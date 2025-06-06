@@ -6,10 +6,7 @@ interface RightSlideAnimationProps extends BoxProps {
   children: ReactNode;
 }
 
-const RightSlideAnimation = ({
-  children,
-  ...props
-}: RightSlideAnimationProps) => {
+const RightToLeftSlide = ({ children, ...props }: RightSlideAnimationProps) => {
   return (
     <motion.div
       initial={{ x: "100%", opacity: 0 }}
@@ -30,4 +27,4 @@ const RightSlideAnimation = ({
   );
 };
 
-export default RightSlideAnimation;
+export default RightToLeftSlide;
