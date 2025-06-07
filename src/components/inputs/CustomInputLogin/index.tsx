@@ -70,7 +70,7 @@ const CustomInputLogin = ({
             paddingBottom: "0.5vh",
             paddingRight: "1.5vh",
             paddingLeft: "0.5vh",
-            width: "40vh",
+            color: "#383838",
           },
         }}
         {...props}

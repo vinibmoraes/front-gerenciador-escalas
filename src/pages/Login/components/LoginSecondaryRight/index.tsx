@@ -19,7 +19,6 @@ const StackLoginSecondaryRight = () => {
         "vinibmoraesgamer@gmail.com"
       );
       if (success) {
-        // Redirecionar ou mostrar mensagem
         console.log("Login com Google realizado com sucesso!");
       }
     },
@@ -66,9 +65,21 @@ const StackLoginSecondaryRight = () => {
           />
         </Box>
 
-        <CustomInputLogin label="Nome" type="text" />
-        <CustomInputLogin label="E-mail" type="email" />
-        <CustomInputLogin label="Senha" type="password" />
+        <CustomInputLogin
+          label="Nome"
+          type="text"
+          sx={{ width: "40vh", maxWidth: "400px" }}
+        />
+        <CustomInputLogin
+          label="E-mail"
+          type="email"
+          sx={{ width: "40vh", maxWidth: "400px" }}
+        />
+        <CustomInputLogin
+          label="Senha"
+          type="password"
+          sx={{ width: "40vh", maxWidth: "400px" }}
+        />
 
         <Box sx={{ mt: "3vh" }}>
           <BlueButton text="Cadastrar" />

@@ -32,8 +32,16 @@ const LoginPrimaryLeft = () => {
         />
         <CustomText text="Login" size="responsiveText" color="#0F52BA" />
 
-        <CustomInputLogin label="E-mail" type="email" />
-        <CustomInputLogin label="Senha" type="password" />
+        <CustomInputLogin
+          label="E-mail"
+          type="email"
+          sx={{ width: "40vh", maxWidth: "400px" }}
+        />
+        <CustomInputLogin
+          label="Senha"
+          type="password"
+          sx={{ width: "40vh", maxWidth: "400px" }}
+        />
 
         <RememberAndRecover />
 
