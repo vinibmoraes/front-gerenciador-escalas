@@ -67,7 +67,7 @@ const RecoverPasswordModal = ({ open, onClose }: Props) => {
               />
 
               <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
-                <CustomButtonBlue text="Cadastrar" onClick={handleSend} />
+                <CustomButtonBlue text="Enviar" onClick={handleSend} />
               </Box>
             </VStack>
           </Box>
