@@ -34,7 +34,7 @@ const sizeStyles: Record<TextSize, SxProps<Theme>> = {
     textTransform: "uppercase",
     letterSpacing: "1px",
   },
-  responsiveTitle: { fontSize: "2vw", fontWeight: 700 },
+  responsiveTitle: { fontSize: "calc(1.5vw + 1.5vh)", fontWeight: 700 },
   responsiveText: { fontSize: "1.5vw", fontWeight: 600 },
 };
 

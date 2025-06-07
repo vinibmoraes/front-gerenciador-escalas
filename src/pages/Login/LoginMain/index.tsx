@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Box } from "@mui/material";
 import { AnimatePresence } from "framer-motion";
-import RightSlideAnimation from "../../../../components/animations/RightToLeftSlide";
-import LoginPrimaryLeft from "../LoginPrimaryLeft";
-import LeftSlideAnimation from "../../../../components/animations/LeftToRightSlide";
-import LoginPrimaryRight from "../LoginPrimaryRight";
-import StackLoginSecondaryRight from "../LoginSecondaryRight";
-import LoginSecondaryLeft from "../LoginSecondaryLeft";
+import RightSlideAnimation from "../../../components/animations/RightToLeftSlide";
+import LoginPrimaryLeft from "../components/LoginPrimaryLeft";
+import LeftSlideAnimation from "../../../components/animations/LeftToRightSlide";
+import LoginPrimaryRight from "../components/LoginPrimaryRight";
+import StackLoginSecondaryRight from "../components/LoginSecondaryRight";
+import LoginSecondaryLeft from "../components/LoginSecondaryLeft";
 
 const LoginMain = () => {
+  console.log("GOOGLE CLIENT ID:", process.env.REACT_APP_GOOGLE_CLIENT_ID);
   const [isCreatingAccount, setIsCreatingAccount] = useState(false);
 
   const handleCreateAccount = () => setIsCreatingAccount(true);
