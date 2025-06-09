@@ -5,27 +5,25 @@ import AuthIconButton from "../../../../components/buttons/CustomButtonIcon";
 import AnimatedIcon from "../../../../components/animations/AnimatedIcon";
 import VStack from "../../../../components/stacks/Vstack";
 import HStack from "../../../../components/stacks/Hstack";
-import logoGoogleColorido from "../../../../assets/logo-google-colorido.png";
 import CustomText from "../../../../components/texts/CustomText";
 import CustomInputLogin from "../../../../components/inputs/CustomInputLogin";
-import { useGoogleLogin } from "@react-oauth/google";
+import { GoogleLogin } from "@react-oauth/google";
 import { loginWithGoogle } from "../../../../services/authService";
 
 const StackLoginSecondaryRight = () => {
-  const handleGoogleLogin = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
+  const handleGoogleLogin = async (credentialResponse: any) => {
+    const accessToken = credentialResponse?.credential;
+    if (accessToken) {
       const success = await loginWithGoogle(
-        tokenResponse.access_token,
+        accessToken,
         "vinibmoraesgamer@gmail.com"
       );
       if (success) {
         console.log("Login com Google realizado com sucesso!");
       }
-    },
-    onError: () => {
-      console.error("Erro ao autenticar com o Google");
-    },
-  });
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -49,9 +47,11 @@ const StackLoginSecondaryRight = () => {
             justifyContent: "space-around",
           }}
         >
-          <AuthIconButton
-            icon={<AnimatedIcon icon={logoGoogleColorido} alt="Google logo" />}
-            onClick={handleGoogleLogin}
+          <GoogleLogin
+            onSuccess={handleGoogleLogin}
+            onError={() => {
+              console.error("Erro ao autenticar com o Google");
+            }}
           />
           <AuthIconButton icon={<AnimatedIcon icon={<AppleIcon />} />} />
         </HStack>
