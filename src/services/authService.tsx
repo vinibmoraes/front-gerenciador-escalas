@@ -1,11 +1,15 @@
+import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 
-export const loginWithGoogle = async (googleToken: string, email: string) => {
+export const loginWithGoogle = async (
+  useGoogleLogin: string,
+  email: string
+) => {
   try {
     const response = await axios.post("http://localhost:5000/api/auth/login", {
       Email: email,
       Senha: null,
-      TokenExterno: googleToken,
+      TokenExterno: useGoogleLogin,
       AuthType: 2,
     });
 
