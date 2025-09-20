@@ -1,0 +1,20 @@
+export type AuthType = 'local' | 'google' | 'apple';
+
+export interface LoginCredentials {
+  Email: string;
+  Senha?: string | null;
+  TokenExterno?: string;
+  AuthType: number;
+}
+
+export interface LoginResponse {
+  authToken?: string;
+  refreshToken?: string;
+  Mensagem?: string;
+}
+
+export interface UserProfile {
+  id: string;
+  email: string;
+  name: string;
+}

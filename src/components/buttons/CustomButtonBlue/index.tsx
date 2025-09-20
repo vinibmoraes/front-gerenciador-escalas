@@ -1,15 +1,19 @@
 import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
+import React from 'react';
+
 const CustomButtonBlue = ({
   text,
   onClick,
+  disabled,
 }: {
-  text: string;
+  text: React.ReactNode;
   onClick?: () => void;
+  disabled?: boolean;
 }) => {
   return (
-    <StyledButton variant="contained" fullWidth onClick={onClick}>
+    <StyledButton variant="contained" fullWidth onClick={onClick} disabled={disabled}>
       {text}
     </StyledButton>
   );
