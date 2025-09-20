@@ -8,11 +8,8 @@ export interface LoginCredentials {
 }
 
 export interface LoginResponse {
-  Sucesso: boolean;
-  Dados?: {
-    AuthToken: string;
-    RefreshToken: string;
-  };
+  authToken?: string;
+  refreshToken?: string;
   Mensagem?: string;
 }
 

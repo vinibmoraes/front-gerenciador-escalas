@@ -61,33 +61,31 @@ class AuthService {
 
       const response = await this.authContext.authenticate(authCredentials);
       
-      if (response?.Sucesso && response.Dados) {
-        const { AuthToken, RefreshToken } = response.Dados;
-        this.setAuthData(AuthToken, RefreshToken);
+      if (response?.authToken && response.refreshToken) {
+        const { authToken, refreshToken } = response;
+        this.setAuthData(authToken, refreshToken);
         return true;
       }
       
-      throw new Error(response?.Mensagem || "Erro no login");
+      throw new Error((response as any)?.Mensagem || "Erro no login");
     } catch (error) {
       console.error(`Erro ao fazer login com ${type}:`, error);
       throw error;
     }
   }
 
-  // Wrapper methods for specific authentication types
-  public async loginWithGoogle(token: string, email: string): Promise<boolean> {
-    return this.authenticate('google', { token, email });
+  public async loginWithGoogle(token: string): Promise<boolean> {
+    return this.authenticate('google', { token });
   }
 
-  public async loginWithApple(token: string, email: string): Promise<boolean> {
-    return this.authenticate('apple', { token, email });
+  public async loginWithApple(token: string): Promise<boolean> {
+    return this.authenticate('apple', { token });
   }
 
   public async loginWithEmail(email: string, password: string): Promise<boolean> {
     return this.authenticate('local', { email, password });
   }
 
-  // Token management
   public getAuthToken(): string | null {
     return localStorage.getItem(AUTH_TOKEN_KEY);
   }

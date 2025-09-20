@@ -18,7 +18,7 @@ export interface AppConfig {
 
 // Get environment variables
 const ENV = (process.env.REACT_APP_ENV || 'development') as Env;
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:50588/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://localhost:50588/api';
 
 // Configuration object
 export const config: AppConfig = {
