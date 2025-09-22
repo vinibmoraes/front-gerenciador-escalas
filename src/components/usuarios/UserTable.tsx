@@ -10,7 +10,6 @@ import {
   IconButton,
   CircularProgress,
   Box,
-  Chip,
   Typography
 } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
@@ -21,12 +20,6 @@ interface UserTableProps {
   users: Usuario[];
   loading: boolean;
 }
-
-const statusColors: { [key in Usuario['status']]: 'success' | 'warning' | 'default' } = {
-  Ativo: 'success',
-  Inativo: 'warning',
-  Convidado: 'default',
-};
 
 const UserTable: React.FC<UserTableProps> = ({ users, loading }) => {
   if (loading) {
@@ -44,7 +37,6 @@ const UserTable: React.FC<UserTableProps> = ({ users, loading }) => {
           <TableRow>
             <TableCell><Typography fontWeight="bold">Nome</Typography></TableCell>
             <TableCell><Typography fontWeight="bold">Email</Typography></TableCell>
-            <TableCell><Typography fontWeight="bold">Status</Typography></TableCell>
             <TableCell align="right"><Typography fontWeight="bold">Ações</Typography></TableCell>
           </TableRow>
         </TableHead>
@@ -58,9 +50,6 @@ const UserTable: React.FC<UserTableProps> = ({ users, loading }) => {
                 {user.nome}
               </TableCell>
               <TableCell>{user.email}</TableCell>
-              <TableCell>
-                <Chip label={user.status} color={statusColors[user.status]} size="small" />
-              </TableCell>
               <TableCell align="right">
                 <IconButton aria-label="edit">
                   <EditIcon />

@@ -32,7 +32,7 @@ const LoginPrimaryLeft = () => {
     try {
       const success = await authService.loginWithEmail(email, password);
       if (success) {
-        navigate("/"); // Redirect to home/dashboard on success
+        navigate("/inicio"); // Redirect to /inicio on success
       }
     } catch (err: any) {
       setError(err.message || "Ocorreu um erro ao tentar fazer login.");

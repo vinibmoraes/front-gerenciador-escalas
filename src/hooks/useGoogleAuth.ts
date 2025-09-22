@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { authService } from "../services/authService";
 
 export const useGoogleAuth = () => {
+  const navigate = useNavigate();
+
   const handleLogin = async (credentialResponse: any) => {
     const accessToken = credentialResponse?.credential;
     if (!accessToken) {
@@ -12,6 +15,7 @@ export const useGoogleAuth = () => {
       const success = await authService.loginWithGoogle(accessToken);
       if (success) {
         console.log("Login com Google realizado com sucesso!");
+        navigate("/inicio");
       }
     } catch (error) {
       console.error("Google login failed:", error);
